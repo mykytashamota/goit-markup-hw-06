@@ -554,6 +554,10 @@ header .container {
 
 .footer-email-input {
   padding: 8px 16px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--portfolio-card-animation);
 }
 
 .footer-email-input:focus {
