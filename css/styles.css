@@ -535,6 +535,69 @@ header .container {
   background-color: var(--success);
 }
 
+.footer-form-container {
+  padding-left: 80px;
+}
+
+.sub-form {
+  display: flex;
+}
+
+.footer-email-input {
+  width: 264px;
+  height: 40px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.footer-email-input {
+  padding: 8px 16px;
+}
+
+.footer-email-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  color: var(--footer-text);
+}
+
+.sub-form input::placeholder {
+  font-size: 12px;
+  line-height: 2%;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sub-btn {
+  color: var(--light-color-title-btn);
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 24px;
+  border: none;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--portfolio-card-animation)
+}
+
+.sub-btn:hover,
+.sub-btn:focus {
+  outline: none;
+  background-color: #404bbf;
+}
+
+.footer-email-input+.sub-btn {
+  margin-left: 24px;
+}
+
 /* -----------------------------PORTFOLIO-------------------------- */
 .portfolio {
   padding-top: 96px;
@@ -677,7 +740,6 @@ header .container {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  /* outline: 3px solid blue; */
   padding: 72px 24px 24px 24px;
 }
 
@@ -705,6 +767,8 @@ header .container {
   visibility: hidden;
 }
 
+/* -------------------------F O R M----------------------- */
+
 .modal-title {
   font-weight: 600;
   font-size: 16px;
@@ -714,7 +778,6 @@ header .container {
   margin-bottom: 16px;
 
   color: var(--header-nav-color);
-  /* outline: 1px solid purple; */
 }
 
 .modal-label {
@@ -725,9 +788,14 @@ header .container {
   color: var(--icon-color);
 }
 
-.modal-input-wrap {
+.form-field {
   position: relative;
   margin-bottom: 8px;
+}
+
+.form-field textarea::placeholder {
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-input {
@@ -749,13 +817,15 @@ header .container {
 
 .modal-input:focus+.input-icon {
   fill: var(--accent-color);
+  outline: var(--accent-color);
 }
 
 .input-icon {
   position: absolute;
   left: 16px;
-  top: 50%;
+  top: 65%;
   transform: translateY(-50%);
+
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--portfolio-card-animation);
@@ -815,35 +885,27 @@ header .container {
   border-color: var(--accent-color);
 }
 
-/* .checkbox-text::before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  border: 1.25px solid var(--main-color);
-  border-radius: 2px;
-  margin-right: 8px;
-}
-
-.modal-checkbox:checked+.checkbox-text::before {
-  background-color: var(--accent-color);
-  border: none;
-  background-image: url(../images/Vector.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-} */
-
 .policy-link {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
   color: var(--accent-color);
+  text-decoration: none;
+  margin-left: 3px;
 }
 
 .modal-btn {
-  padding: 16px 60px;
-  border: none;
+  background-color: var(--iris);
+  width: 170px;
+  height: 51px;
   border-radius: 4px;
+  color: var(--white);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
 
   color: var(--light-color-title-btn);
   background-color: var(--accent-color);
