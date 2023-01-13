@@ -536,11 +536,21 @@ header .container {
 }
 
 .footer-form-container {
-  padding-left: 80px;
+  margin-left: 80px;
 }
 
 .sub-form {
   display: flex;
+}
+
+.footer-sub {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+
+  color: var(--light-color-title-btn);
 }
 
 .footer-email-input {
@@ -579,7 +589,7 @@ header .container {
   border-radius: 4px;
   letter-spacing: 0.06em;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -755,14 +765,21 @@ header .container {
   height: 24px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition-property: box-shadow;
+  transition-property: box-shadow, background-color, fill;
   transition-duration: 250ms;
   transition-timing-function: var(--portfolio-card-animation);
 }
 
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   border: none;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  background-color: var(--accent-color);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: var(--light-color-title-btn);
 }
 
 .is-hidden {
@@ -774,7 +791,7 @@ header .container {
 /* -------------------------F O R M----------------------- */
 
 .modal-title {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
@@ -785,6 +802,7 @@ header .container {
 }
 
 .modal-label {
+  position: relative;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
@@ -793,7 +811,6 @@ header .container {
 }
 
 .form-field {
-  position: relative;
   margin-bottom: 8px;
 }
 
@@ -827,7 +844,7 @@ header .container {
 .input-icon {
   position: absolute;
   left: 16px;
-  top: 65%;
+  top: 84%;
   transform: translateY(-50%);
 
   transition-property: fill;
@@ -854,6 +871,10 @@ header .container {
   border-color: var(--accent-color);
 }
 
+.checkbox-field {
+  margin-bottom: 24px;
+}
+
 .checkbox-text {
   font-weight: 400;
   font-size: 12px;
@@ -878,6 +899,10 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--portfolio-card-animation);
 }
 
 .modal-checkbox:checked+.checkbox-text span {
@@ -901,11 +926,11 @@ header .container {
   height: 51px;
   border-radius: 4px;
   color: var(--white);
+  margin: 0 auto;
   padding: 16px 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 24px auto;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
